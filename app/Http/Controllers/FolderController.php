@@ -52,7 +52,7 @@ class FolderController extends Controller
                 // NEW CODE
                 $uploadedFile = $req->image;
                 $filename = "MEDIA-" . rand() . "." . $uploadedFile->getClientOriginalExtension();
-                $directory = 'filemanager/media';
+                $directory = 'amp_file_manager/media';
                 $path = Storage::disk('blockstorage')->putFileAs($directory, $uploadedFile, $filename);
                 $fileSystem->description = $filename;
             }else{
@@ -120,7 +120,7 @@ class FolderController extends Controller
                 // NEW CODE
                 $uploadedFile = $req->image;
                 $filename = "MEDIA-" . rand() . "." . $uploadedFile->getClientOriginalExtension();
-                $directory = 'filemanager/media';
+                $directory = 'amp_file_manager/media';
                 $path = Storage::disk('blockstorage')->putFileAs($directory, $uploadedFile, $filename);
                 $fileSystem->description = $filename;
             }else{
@@ -199,7 +199,7 @@ class FolderController extends Controller
     }
     protected function saveFile(UploadedFile $file, Request $request) {
         $fileName = $this->createFilename($file);
-        $filePath = "filemanager/videos/{$fileName}";
+        $filePath = "amp_file_manager/videos/{$fileName}";
         $mime = str_replace('/', '-', $file->getMimeType());
         // Store the file in Vultr Block Storage
         Storage::disk('blockstorage')->put($filePath, fopen($file->getPathname(), 'r+'));
@@ -219,7 +219,7 @@ class FolderController extends Controller
     }
     public function delete(Request $request) {
         $file = $request->filename;
-        $filePath = "filemanager/videos/{$file}";
+        $filePath = "amp_file_manager/videos/{$file}";
         if (Storage::disk('blockstorage')->delete($filePath)) {
             return response()->json(['status' => 'ok'], 200);
         } else {
@@ -246,8 +246,8 @@ class FolderController extends Controller
         header("Cache-Control: post-check=0, pre-check=0", false);
         header("Pragma: no-cache");
 
-        $chunkDir = '/mnt/blockstorage/filemanager/chunks/';
-        $finalDir = '/mnt/blockstorage/filemanager/videos/';
+        $chunkDir = '/mnt/blockstorage/amp_file_manager/chunks/';
+        $finalDir = '/mnt/blockstorage/amp_file_manager/videos/';
         $cleanupTargetDir = true; // Remove old files
         $maxFileAge = 15 * 3600; // Temp file age in seconds
 
