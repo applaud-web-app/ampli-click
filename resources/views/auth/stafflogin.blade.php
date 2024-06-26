@@ -18,7 +18,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Page Title Here -->
-	<title>Trainer Login : Dhibrahm LMS</title>
+	<title>Trainer Login : Ampliclicks Academy</title>
 
 	<!-- FAVICONS ICON -->
 	<link rel="shortcut icon" type="image/png" href="{{asset('images/favicon.png')}}">

@@ -18,7 +18,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Page Title Here -->
-	<title>Learner Register : Dhibrahm LMS</title>
+	<title>Learner Register : Ampliclicks Academy</title>
 
 	<!-- FAVICONS ICON -->
 	<link rel="shortcut icon" type="image/png" href="{{asset('images/favicon.png')}}">
@@ -135,9 +135,9 @@
 			</div>
 			<div class="modal-body">
 			<p>
-				Dhibrahm Analytics would like to congratulate you for taking the first step towards the amazing world of Data Science and Analytics. On behalf of the entire faculty and staff, it is my pleasure to welcome you to the Data Analytics Master Program at Dhibrahm Analytics. We are thrilled to have you as a vibrant part of the Data Scientists community.</p>
+				Ampliclicks Academy would like to congratulate you for taking the first step towards the amazing world of Data Science and Analytics. On behalf of the entire faculty and staff, it is my pleasure to welcome you to the Data Analytics Master Program at Ampliclicks Academy. We are thrilled to have you as a vibrant part of the Data Scientists community.</p>
 				
-			<p>The Data Analytics Master Program (which includes online/offline training and mentorship) is designed to equip you with the necessary skills, required knowledge, and hands-on practical experience to thrive in the rapidly evolving field of data science. Throughout your journey at Dhibrahm Analytics, you will be challenged to think critically and innovate to explore the frontiers of Data Science.</p>
+			<p>The Data Analytics Master Program (which includes online/offline training and mentorship) is designed to equip you with the necessary skills, required knowledge, and hands-on practical experience to thrive in the rapidly evolving field of data science. Throughout your journey at Ampliclicks Academy, you will be challenged to think critically and innovate to explore the frontiers of Data Science.</p>
 
  
 
@@ -145,7 +145,7 @@
 
  
 
-	<p>Our faculty members and mentors are experts in their fields and are committed to providing a world-class training experience. They will challenge you, inspire you, and provide guidance throughout your journey at Dhibrahm Analytics. Our extended staff members are here to support you on every step of the journey, from navigating administrative processes, to providing career advice, desired counseling services, and finally walk you through all the baby steps required to get placed.</p>
+	<p>Our faculty members and mentors are experts in their fields and are committed to providing a world-class training experience. They will challenge you, inspire you, and provide guidance throughout your journey at Ampliclicks Academy. Our extended staff members are here to support you on every step of the journey, from navigating administrative processes, to providing career advice, desired counseling services, and finally walk you through all the baby steps required to get placed.</p>
 
  
 
@@ -153,7 +153,7 @@
 
  
 
-<p>We encourage you to take advantage of all the opportunities available here and make the most use of your time at Dhibrahm Analytics. We are confident that you will find the journey both challenging and rewarding. We intend to support you in every way that fulfills the academic and professional pursuits of your dreams.</p>
+<p>We encourage you to take advantage of all the opportunities available here and make the most use of your time at Ampliclicks Academy. We are confident that you will find the journey both challenging and rewarding. We intend to support you in every way that fulfills the academic and professional pursuits of your dreams.</p>
 
  
 
@@ -167,7 +167,7 @@
 
 <p>iii)For classes, you will be sent the zoom link in the batch group in advance,</p>
 
-<p>iv)For accessing the recordings of the classes and assignments you need to login to our LMS platform, https://app.dhibrahm.com/register . Upon joining our course and registration on our LMS portal to access class materials, you therby accept and agree to be abide by the terms and conditions mentioned in our website www.dhibrahm.com.</p>
+<p>iv)For accessing the recordings of the classes and assignments you need to login to our LMS platform, https://app.ampliclicksacademy.in/register . Upon joining our course and registration on our LMS portal to access class materials, you therby accept and agree to be abide by the terms and conditions mentioned in our website www.ampliclicksacademy.com.</p>
 
  
 
@@ -191,15 +191,15 @@
 
  
 
-<p>By enrolling for any single or combination of Dhibrahm Analytics’ courses, whether purchased by you or a third party on your behalf, at full price or on a special offer, you agree that.</p>
+<p>By enrolling for any single or combination of Ampliclicks Academy’ courses, whether purchased by you or a third party on your behalf, at full price or on a special offer, you agree that.</p>
 
  
 
-<p>In case Dhibrahm Analytics cancels the whole program (rescheduling of certain classes does not tantamount to cancellation of the program), 100% refund will be paid to you within 30 days of such cancellation.</p>
+<p>In case Ampliclicks Academy cancels the whole program (rescheduling of certain classes does not tantamount to cancellation of the program), 100% refund will be paid to you within 30 days of such cancellation.</p>
 
  
 
-<p>If the student wishes to discontinue the course, he/she must intimate in writing to info@dhibrahm.comwithin 15 days of course start date or attend 4 classes, whichever is earlier. In such case 100% of total paid amount will be refunded except registration charges of Rs. 2,500/-</p>
+<p>If the student wishes to discontinue the course, he/she must intimate in writing to info@ampliclicksacademy.com within 15 days of course start date or attend 4 classes, whichever is earlier. In such case 100% of total paid amount will be refunded except registration charges of Rs. 2,500/-</p>
 
  
 
@@ -207,11 +207,11 @@
 
  
 
-<p>After which, Dhibrahm Analytics is not obliged or bound legally to refund any portion of the course fees. Exclusions apply, see below.</p>
+<p>After which, Ampliclicks Academy is not obliged or bound legally to refund any portion of the course fees. Exclusions apply, see below.</p>
 
  
 
-<p>A student is considered enrolled when they have received a payment confirmation email from Dhibrahm Analytics. A request for refund will only be considered valid if emailed to us at info@dhibrahm.com. Any request sent after the expiration of the refund period will not be considered.</p>
+<p>A student is considered enrolled when they have received a payment confirmation email from Ampliclicks Academy. A request for refund will only be considered valid if emailed to us at info@ampliclicksacademy.com. Any request sent after the expiration of the refund period will not be considered.</p>
 
  
 
@@ -245,7 +245,7 @@
 
  
 
-<p>We thank you for believing in team Dhibrahm Analytics and once again, welcome to Dhibrahm Analytics’ Data Science Master Program! We are thrilled to have you as a part of our community, and we wish you all the best for a stupendous career in the field of Data Science.</p>
+<p>We thank you for believing in team Ampliclicks Academy and once again, welcome to Ampliclicks Academy’ Data Science Master Program! We are thrilled to have you as a part of our community, and we wish you all the best for a stupendous career in the field of Data Science.</p>
 
 
 			</div>
