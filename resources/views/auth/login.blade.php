@@ -151,15 +151,14 @@
 	<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
 	<script>
 		var mobileNumberG = '0';
-        var firebaseConfig = {
-            apiKey: "AIzaSyCo8KaHu8XZ6jm3ewJXqs0Kma8ZfiSoby4",
-			authDomain: "otplogin-5f6f9.firebaseapp.com",
-			projectId: "otplogin-5f6f9",
-			storageBucket: "otplogin-5f6f9.appspot.com",
-			messagingSenderId: "493284471501",
-			appId: "1:493284471501:web:55ca067ed947569b2eef84",
-			measurementId: "G-0ZJLWFMJMH"
-        };
+		var firebaseConfig = {
+			apiKey: "AIzaSyAFEcGmT1yGTsz53SDQMCm47YyzKhOAbcM",
+			authDomain: "ampliclicks-otp.firebaseapp.com",
+			projectId: "ampliclicks-otp",
+			storageBucket: "ampliclicks-otp.appspot.com",
+			messagingSenderId: "635387170141",
+			appId: "1:635387170141:web:2c334b5662b4ef68beacb4"
+		};
         firebase.initializeApp(firebaseConfig);
     </script>
 	 <script>
