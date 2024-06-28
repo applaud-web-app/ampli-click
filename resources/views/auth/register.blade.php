@@ -167,7 +167,7 @@
 
 <p>iii)For classes, you will be sent the zoom link in the batch group in advance,</p>
 
-<p>iv)For accessing the recordings of the classes and assignments you need to login to our LMS platform, https://app.ampliclicksacademy.in/register . Upon joining our course and registration on our LMS portal to access class materials, you therby accept and agree to be abide by the terms and conditions mentioned in our website www.ampliclicksacademy.com.</p>
+<p>iv)For accessing the recordings of the classes and assignments you need to login to our LMS platform, https://app.ampliclicksacademy.in/register . Upon joining our course and registration on our LMS portal to access class materials, you therby accept and agree to be abide by the terms and conditions mentioned in our website www.ampliclicksacademy.in.</p>
 
  
 
@@ -199,7 +199,7 @@
 
  
 
-<p>If the student wishes to discontinue the course, he/she must intimate in writing to info@ampliclicksacademy.com within 15 days of course start date or attend 4 classes, whichever is earlier. In such case 100% of total paid amount will be refunded except registration charges of Rs. 2,500/-</p>
+<p>If the student wishes to discontinue the course, he/she must intimate in writing to info@ampliclicksacademy.inwithin 15 days of course start date or attend 4 classes, whichever is earlier. In such case 100% of total paid amount will be refunded except registration charges of Rs. 2,500/-</p>
 
  
 
@@ -211,7 +211,7 @@
 
  
 
-<p>A student is considered enrolled when they have received a payment confirmation email from Ampliclicks Academy. A request for refund will only be considered valid if emailed to us at info@ampliclicksacademy.com. Any request sent after the expiration of the refund period will not be considered.</p>
+<p>A student is considered enrolled when they have received a payment confirmation email from Ampliclicks Academy. A request for refund will only be considered valid if emailed to us at info@ampliclicksacademy.in. Any request sent after the expiration of the refund period will not be considered.</p>
 
  
 

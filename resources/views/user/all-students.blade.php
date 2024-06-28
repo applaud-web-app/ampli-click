@@ -107,7 +107,9 @@
                         </td>
                         <td>
                           <div class="d-flex ">
-      
+                            <button type="button" class="modalDevice btn btn-dark shadow btn-xs me-1" data-bs-toggle="modal"
+                            data-bs-target="#loginDevice" title="Login Device" data-id="{{$student->id}}"> Login Device</button>
+
                             <button type="button" class="modalpass btn btn-info shadow btn-xs me-1" data-bs-toggle="modal"
                               data-bs-target="#exampleModalCenter2" title="Update Pass" data-id="{{$student->id}}"><i
                                 class="fa-solid fa-lock"></i> Update Password</button>
@@ -139,6 +141,27 @@
     <div class="modal fade" id="exampleModalCenter2">
       <div class="modal-dialog modal-sm">
         <div class="modal-content" id="modalbody">
+        </div>
+      </div>
+    </div>
+    {{-- Model End --}}
+
+
+     {{-- Device Model Start --}}
+     <div class="modal fade" id="loginDevice">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Device Info</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0"  id="deviceDetails">
+              <div class="d-flex justify-content-center align-items-center p-3">
+                <div class="spinner-border text-danger" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </div>
@@ -200,6 +223,9 @@ Footer start
                                   </td>
                                   <td>
                                     <div class="">
+                                       <button type="button" class="modalDevice btn btn-dark shadow btn-xs me-1" data-bs-toggle="modal"
+                                      data-bs-target="#loginDevice" title="Login Device" data-id="${respond['students'][i].id}"> Login Device</button>
+
                                       <button type="button" class="modalpass btn btn-info shadow btn-xs me-1" data-bs-toggle="modal" data-bs-target="#exampleModalCenter2" title="Update Pass" data-id="${respond['students'][i].id}"><i class="fa-solid fa-lock"></i> Update Password</button>
                                     </div>
                                   </td>
@@ -253,6 +279,9 @@ Footer start
                                   </td>
                                   <td>
                                     <div class="">
+                                      <button type="button" class="modalDevice btn btn-dark shadow btn-xs me-1" data-bs-toggle="modal"
+                                      data-bs-target="#loginDevice" title="Login Device" data-id="${respond['students'][i].id}"> Login Device</button>
+
                                       <button type="button" class="modalpass btn btn-info shadow btn-xs me-1" data-bs-toggle="modal" data-bs-target="#exampleModalCenter2" title="Update Pass" data-id="${respond['students'][i].id}"><i class="fa-solid fa-lock"></i> Update Password</button>
                                     </div>
                                   </td>
@@ -307,6 +336,9 @@ Footer start
                                     </td>
                                     <td>
                                       <div class="">
+                                        <button type="button" class="modalDevice btn btn-dark shadow btn-xs me-1" data-bs-toggle="modal"
+                                      data-bs-target="#loginDevice" title="Login Device" data-id="${respond['students'][i].id}"> Login Device</button>
+
                                         <button type="button" class="modalpass btn btn-info shadow btn-xs me-1" data-bs-toggle="modal" data-bs-target="#exampleModalCenter2" title="Update Pass" data-id="${respond['students'][i].id}"><i class="fa-solid fa-lock"></i> Update Password</button>
                                       </div>
                                     </td>
@@ -363,6 +395,59 @@ Footer start
                            </form>`);
           } else {
             $("#modalbody").append("<span class='text-danger'>Error!! Please Try Again Later</span>");
+          }
+        }
+      });
+    });
+  });
+</script>
+<script>
+  // User login Device
+  $(document).ready(function () {
+    $(document).on('click', '.modalDevice', function () {
+      $id = $(this).data('id');
+      $("#deviceDetails").html(`<div class="d-flex justify-content-center align-items-center p-3">
+                <div class="spinner-border text-danger" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>`);
+      $.ajax({
+        url: '{{ url("/fetch-user-login-details/")}}/' + $id,
+        type: 'post',
+        data: { _token: '{{csrf_token()}}' },
+        dataType: 'json',
+        success: function (respond) {
+          console.log(respond);
+          let data = `<div class="table-responsive">
+                      <table class=" table dataTable display verticle-middle ">
+                        <thead>
+                            <tr>
+                                <th>S No.</th>
+                                <th>IP Address</th>
+                                <th>Device</th>
+                                <th>Browser</th>
+                                <th>Last Activity</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>`;
+          if(respond['status']){
+            for (let index = 0; index < respond['deviceData'].length; index++) {
+              data += `<tbody>
+                        <tr>
+                            <td>${index+1}</td>
+                            <td>${respond['deviceData'][index]['ip_address']}</td>
+                            <td>${respond['deviceData'][index]['device']}</td>
+                            <td>${respond['deviceData'][index]['browser']}, ${respond['deviceData'][index]['os']}</td>
+                            <td>${respond['deviceData'][index]['last_activity']}</td>
+                            <td><a href="{{url('/')}}/logout-device/${respond['deviceData'][index]['id']}" class="btn btn-sm btn-danger">Logout</a></td>
+                        </tr>
+                      </tbody>`;           
+              }
+            data += `</table></div>`;
+            $("#deviceDetails").html(data);
+          }else{
+            $("#deviceDetails").html(`<div class='d-flex justify-content-center align-items-center py-3'>
+              <h5>No Active Device Found</h5></div>`);
           }
         }
       });

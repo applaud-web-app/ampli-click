@@ -151,14 +151,14 @@
 	<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
 	<script>
 		var mobileNumberG = '0';
-		var firebaseConfig = {
-			apiKey: "AIzaSyAFEcGmT1yGTsz53SDQMCm47YyzKhOAbcM",
+        var firebaseConfig = {
+            apiKey: "AIzaSyAFEcGmT1yGTsz53SDQMCm47YyzKhOAbcM",
 			authDomain: "ampliclicks-otp.firebaseapp.com",
 			projectId: "ampliclicks-otp",
 			storageBucket: "ampliclicks-otp.appspot.com",
 			messagingSenderId: "635387170141",
 			appId: "1:635387170141:web:2c334b5662b4ef68beacb4"
-		};
+        };
         firebase.initializeApp(firebaseConfig);
     </script>
 	 <script>

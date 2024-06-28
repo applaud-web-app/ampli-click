@@ -11,6 +11,7 @@ use App\Models\AllotBatch;
 use App\Models\OnlineClass;
 use Jenssegers\Agent\Agent;
 use Illuminate\Http\Request;
+use App\Services\UserAgent;
 
 class StudentController extends Controller
 {
@@ -556,4 +557,30 @@ class StudentController extends Controller
         $data['classData'] = OnlineClass::select('online_classes.id','title','subject_id','start_date_time','duration','meeting_id','passcode','created_by')->join('allot_batches as ab','ab.subjects_id','subject_id')->where('students_id',Auth()->guard('student')->user()->id)->where('status',1)->orderBy('online_classes.id','DESC')->paginate(50);
         return view('student.student-online-classes',$data);
     }
+
+    public function fetchUserLoginDetails($student_id = null,UserAgent $userAgent){
+        $deviceData = \DB::table('sessions')->where('student_user_id',$student_id)->get();
+        $finalData = [];
+        foreach($deviceData as $key=> $val){
+           $finalData[$key] = $val;
+           $userAgent->setAgent($val->user_agent);
+           $agentData = $userAgent->getInfo();
+           // dd($agentData);
+           $finalData[$key]->device = $agentData['device_type'];
+           $finalData[$key]->os = $agentData['os'];
+           $finalData[$key]->browser = $agentData['browser'];
+           $finalData[$key]->last_activity = date("d M Y H:i A",$val->last_activity);
+        }
+        if(count($deviceData)){
+            return response()->json([
+                'status'=>1,
+                'deviceData'=>$finalData
+            ]);
+        }
+        return response()->json([
+            'status'=>0,
+        ]);
+
+    }
+
 }

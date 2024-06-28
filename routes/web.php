@@ -141,6 +141,8 @@ Route::post('/search-teacher',[TeacherController::class,'search']);
 Route::get('/add-student',[StudentController::class,'index']);
 Route::post('/add-student',[StudentController::class,'insert']);
 Route::get('/students',[StudentController::class,'view']);
+Route::post('/fetch-user-login-details/{id}',[StudentController::class,'fetchUserLoginDetails']);
+Route::get('/delete-student-session/{id}',[StudentController::class,'fetchUserLoginDetails']);
 
 // Route::get('/student/delete/{id}',[StudentController::class,'destroy'])->name('delete.student');
 Route::get('/student/edit/{id}',[StudentController::class,'singleRecord'])->name('edit.student');

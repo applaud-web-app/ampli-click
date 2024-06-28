@@ -11,9 +11,9 @@ class Common
 
     public function uploadFileInBlockStorage($uploadedFile,$fileName,$type){
         if($type == "Media"){
-            $directory = 'amp_file_manager/media';
+            $directory = 'filemanager/media';
         }else if($type == "Video"){
-            $directory = 'amp_file_manager/video';
+            $directory = 'filemanager/video';
         }
         $path = Storage::disk('blockstorage')->putFileAs($directory, $uploadedFile, $filename);
         // Save the file description

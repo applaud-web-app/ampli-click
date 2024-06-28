@@ -86,7 +86,7 @@
                                     <button type="submit" class="btn btn-primary btn-xs">Save Changes</button>
                                 </div>
                             </form>
-                            <div class="mt-3">
+                            {{-- <div class="mt-3">
                                 <h4>Logged In Devices</h4>
                                 <div class="table-responsive">
                                     <table class=" table dataTable display verticle-middle ">
@@ -115,7 +115,7 @@
 
                                     </table>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>

@@ -20,11 +20,11 @@ class ImageViewController extends Controller
         }
         // echo \Session::get('can-access');die;
         if(\Auth::check()){
-            // $filepath = storage_path("app/amp_file_manager/videos/".$file);
+            // $filepath = storage_path("app/filemanager/videos/".$file);
             // return response()->file($filepath);
 
             // NEW
-            $filePath = 'amp_file_manager/videos/' . $file;
+            $filePath = 'filemanager/videos/' . $file;
             $fullPath = Storage::disk('blockstorage')->path($filePath);
         
             if (file_exists($fullPath)) {
@@ -37,8 +37,8 @@ class ImageViewController extends Controller
             $studentId = Auth('student')->user()->id;
             $batchData = AllotBatch::where(['students_id'=>$studentId,'subjects_id'=>$subjectId,'status'=>1])->first();
             if($batchData){
-                // $filepath = storage_path("app/amp_file_manager/videos/".$file);
-                $filePath = 'amp_file_manager/videos/' . $file;
+                // $filepath = storage_path("app/filemanager/videos/".$file);
+                $filePath = 'filemanager/videos/' . $file;
                 $fullPath = Storage::disk('blockstorage')->path($filePath);
                 
                 return response()->file($fullPath);
@@ -74,11 +74,11 @@ class ImageViewController extends Controller
             return abort(404);
         }
         if(\Auth::check()){
-            // $filepath = storage_path("app/amp_file_manager/media/".$file);
+            // $filepath = storage_path("app/filemanager/media/".$file);
             // return response()->file($filepath);
 
             // NEW
-            $filePath = 'amp_file_manager/media/' . $file;
+            $filePath = 'filemanager/media/' . $file;
             $fullPath = Storage::disk('blockstorage')->path($filePath);
         
             if (file_exists($fullPath)) {
@@ -91,9 +91,9 @@ class ImageViewController extends Controller
             $studentId = Auth('student')->user()->id;
             $batchData = AllotBatch::where(['students_id'=>$studentId,'subjects_id'=>$subjectId,'status'=>1])->first();
             if($batchData){
-                // $filepath = storage_path("app/amp_file_manager/media/".$file);
+                // $filepath = storage_path("app/filemanager/media/".$file);
 
-                $filePath = 'amp_file_manager/media/' . $file;
+                $filePath = 'filemanager/media/' . $file;
                 $fullPath = Storage::disk('blockstorage')->path($filePath);
 
                 return response()->file($fullPath);

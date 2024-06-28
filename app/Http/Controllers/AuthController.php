@@ -178,18 +178,18 @@ class AuthController extends Controller
    public function adminProfile($id,UserAgent $userAgent){
      
       $data['adminData'] = User::where('id',$id)->get()->first();
-      $sessionData =\DB::table('sessions')->where('user_id',$id)->get();
-      $finalData = [];
-      foreach($sessionData as $key=> $val){
-         $finalData[$key] = $val;
-         $userAgent->setAgent($val->user_agent);
-         $agentData = $userAgent->getInfo();
-         // dd($agentData);
-         $finalData[$key]->device = $agentData['device_type'];
-         $finalData[$key]->os = $agentData['os'];
-         $finalData[$key]->browser = $agentData['browser'];
-      }
-      $data['sessionData'] = $finalData;
+      // $sessionData = \DB::table('sessions')->where('user_id',$id)->get();
+      // $finalData = [];
+      // foreach($sessionData as $key=> $val){
+      //    $finalData[$key] = $val;
+      //    $userAgent->setAgent($val->user_agent);
+      //    $agentData = $userAgent->getInfo();
+      //    // dd($agentData);
+      //    $finalData[$key]->device = $agentData['device_type'];
+      //    $finalData[$key]->os = $agentData['os'];
+      //    $finalData[$key]->browser = $agentData['browser'];
+      // }
+      // $data['sessionData'] = $finalData;
       return view('user.admin-profile',$data);
    }
 
@@ -440,9 +440,24 @@ class AuthController extends Controller
    }
 
    public function logoutDevice($id){
+      $sessionData = \DB::table('sessions')->where('id',$id)->first();
+      $userId = $sessionData->student_user_id;
       \DB::table('sessions')->where('id',$id)->delete();
-      User::where("id",Auth::id())->update(['remember_token'=>null]);
-      return redirect()->back()->with('success','Device logged out successfully...');
+     
+      if($userId){
+         $studentData = Students::where('id',$sessionData->student_user_id)->first();
+         if($studentData->logged_in_devices > 0){
+            $logged_in_devices = $studentData->logged_in_devices -1;
+         }else{
+            $logged_in_devices = 0;
+         }
+         
+         $studentData->logged_in_devices = $logged_in_devices;
+         $studentData->remember_token = null;
+         $studentData->save();
+         return redirect()->back()->with('success','Device logged out successfully...');
+      }
+      return redirect()->back()->with('warning','User Loggoed Out Itself...or Some Error Occur');
    }
 
   
